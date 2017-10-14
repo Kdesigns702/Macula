@@ -15,6 +15,9 @@
 		038897121F92B4D600B5BEA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038897101F92B4D600B5BEA7 /* LaunchScreen.storyboard */; };
 		0388971D1F92B4DB00B5BEA7 /* MaculaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0388971C1F92B4DB00B5BEA7 /* MaculaTests.swift */; };
 		038897281F92B4DC00B5BEA7 /* MaculaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038897271F92B4DC00B5BEA7 /* MaculaUITests.swift */; };
+		CA8CAE0B1586C9EF6E76E3D0 /* Pods_MaculaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91694EDDA01E96B2D2B12008 /* Pods_MaculaUITests.framework */; };
+		EDF17E7C3485BF2B3F6C0D93 /* Pods_Macula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8987B70187BA09FE362C03 /* Pods_Macula.framework */; };
+		F510A322B5D5E6922548EBE4 /* Pods_MaculaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FE3D5B26D8B5D59A81022D /* Pods_MaculaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,16 @@
 		038897231F92B4DB00B5BEA7 /* MaculaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaculaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		038897271F92B4DC00B5BEA7 /* MaculaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaculaUITests.swift; sourceTree = "<group>"; };
 		038897291F92B4DD00B5BEA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		038897351F92B60900B5BEA7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0BBC163F0434D232C2BF6227 /* Pods-MaculaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaculaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaculaUITests/Pods-MaculaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2D5A00C463A7B3C925D54A3D /* Pods-MaculaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaculaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaculaTests/Pods-MaculaTests.release.xcconfig"; sourceTree = "<group>"; };
+		30FE3D5B26D8B5D59A81022D /* Pods_MaculaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaculaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CCA3F608AFCCA359F3658D /* Pods-Macula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macula.release.xcconfig"; path = "Pods/Target Support Files/Pods-Macula/Pods-Macula.release.xcconfig"; sourceTree = "<group>"; };
+		91694EDDA01E96B2D2B12008 /* Pods_MaculaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaculaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33EDE4845464B33849F9DAA /* Pods-Macula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macula.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macula/Pods-Macula.debug.xcconfig"; sourceTree = "<group>"; };
+		B0F80719B6ED5C6998D81B63 /* Pods-MaculaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaculaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaculaTests/Pods-MaculaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF656E5EB508C544DF37374A /* Pods-MaculaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaculaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaculaUITests/Pods-MaculaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF8987B70187BA09FE362C03 /* Pods_Macula.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Macula.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF17E7C3485BF2B3F6C0D93 /* Pods_Macula.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F510A322B5D5E6922548EBE4 /* Pods_MaculaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8CAE0B1586C9EF6E76E3D0 /* Pods_MaculaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +99,8 @@
 				0388971B1F92B4DA00B5BEA7 /* MaculaTests */,
 				038897261F92B4DB00B5BEA7 /* MaculaUITests */,
 				038897021F92B4C200B5BEA7 /* Products */,
+				F66619E8A01B7A5F67063EC0 /* Pods */,
+				16293043A7598FB445DF8FAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +123,7 @@
 				0388970E1F92B4D500B5BEA7 /* Assets.xcassets */,
 				038897101F92B4D600B5BEA7 /* LaunchScreen.storyboard */,
 				038897131F92B4D800B5BEA7 /* Info.plist */,
+				038897351F92B60900B5BEA7 /* GoogleService-Info.plist */,
 				0388970B1F92B4CF00B5BEA7 /* Macula.xcdatamodeld */,
 			);
 			path = Macula;
@@ -128,6 +147,29 @@
 			path = MaculaUITests;
 			sourceTree = "<group>";
 		};
+		16293043A7598FB445DF8FAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF8987B70187BA09FE362C03 /* Pods_Macula.framework */,
+				30FE3D5B26D8B5D59A81022D /* Pods_MaculaTests.framework */,
+				91694EDDA01E96B2D2B12008 /* Pods_MaculaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F66619E8A01B7A5F67063EC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A33EDE4845464B33849F9DAA /* Pods-Macula.debug.xcconfig */,
+				51CCA3F608AFCCA359F3658D /* Pods-Macula.release.xcconfig */,
+				B0F80719B6ED5C6998D81B63 /* Pods-MaculaTests.debug.xcconfig */,
+				2D5A00C463A7B3C925D54A3D /* Pods-MaculaTests.release.xcconfig */,
+				EF656E5EB508C544DF37374A /* Pods-MaculaUITests.debug.xcconfig */,
+				0BBC163F0434D232C2BF6227 /* Pods-MaculaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0388972C1F92B4DD00B5BEA7 /* Build configuration list for PBXNativeTarget "Macula" */;
 			buildPhases = (
+				9EF7485F4B20321F74EFE95B /* [CP] Check Pods Manifest.lock */,
 				038896FD1F92B4C200B5BEA7 /* Sources */,
 				038896FE1F92B4C200B5BEA7 /* Frameworks */,
 				038896FF1F92B4C200B5BEA7 /* Resources */,
+				996C5403DBC8D9B149FED144 /* [CP] Embed Pods Frameworks */,
+				772BCC418F26F149C1D308F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0388972F1F92B4DD00B5BEA7 /* Build configuration list for PBXNativeTarget "MaculaTests" */;
 			buildPhases = (
+				A8C2797D64B9EDE412568123 /* [CP] Check Pods Manifest.lock */,
 				038897141F92B4DA00B5BEA7 /* Sources */,
 				038897151F92B4DA00B5BEA7 /* Frameworks */,
 				038897161F92B4DA00B5BEA7 /* Resources */,
+				B00E387B758D64230E413FCB /* [CP] Embed Pods Frameworks */,
+				981B0B62BC156E3381ACDC5F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 038897321F92B4DD00B5BEA7 /* Build configuration list for PBXNativeTarget "MaculaUITests" */;
 			buildPhases = (
+				E3E759A3425DAA0D5C41141B /* [CP] Check Pods Manifest.lock */,
 				0388971F1F92B4DB00B5BEA7 /* Sources */,
 				038897201F92B4DB00B5BEA7 /* Frameworks */,
 				038897211F92B4DB00B5BEA7 /* Resources */,
+				6178C9F09B5A20440F09D231 /* [CP] Embed Pods Frameworks */,
+				630164D2308E893F885F4327 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +307,162 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6178C9F09B5A20440F09D231 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaculaUITests/Pods-MaculaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		630164D2308E893F885F4327 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaculaUITests/Pods-MaculaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		772BCC418F26F149C1D308F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Macula/Pods-Macula-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		981B0B62BC156E3381ACDC5F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaculaTests/Pods-MaculaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		996C5403DBC8D9B149FED144 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Macula/Pods-Macula-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EF7485F4B20321F74EFE95B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Macula-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8C2797D64B9EDE412568123 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MaculaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B00E387B758D64230E413FCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MaculaTests/Pods-MaculaTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaculaTests/Pods-MaculaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3E759A3425DAA0D5C41141B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MaculaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		038896FD1F92B4C200B5BEA7 /* Sources */ = {
@@ -367,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -418,7 +625,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -428,34 +635,39 @@
 		};
 		0388972D1F92B4DD00B5BEA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A33EDE4845464B33849F9DAA /* Pods-Macula.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Macula/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.macula.Macula.Macula;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macula.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0388972E1F92B4DD00B5BEA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51CCA3F608AFCCA359F3658D /* Pods-Macula.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Macula/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.macula.Macula.Macula;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macula.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		038897301F92B4DD00B5BEA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F80719B6ED5C6998D81B63 /* Pods-MaculaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -472,6 +684,7 @@
 		};
 		038897311F92B4DD00B5BEA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D5A00C463A7B3C925D54A3D /* Pods-MaculaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +701,7 @@
 		};
 		038897331F92B4DD00B5BEA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF656E5EB508C544DF37374A /* Pods-MaculaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +717,7 @@
 		};
 		038897341F92B4DD00B5BEA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BBC163F0434D232C2BF6227 /* Pods-MaculaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
