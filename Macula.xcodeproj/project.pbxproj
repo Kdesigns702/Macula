@@ -22,6 +22,8 @@
 		FAD99C941F965AA4003C093C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD99C931F965AA4003C093C /* Auth.storyboard */; };
 		FAD99C981F9662F1003C093C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD99C971F9662F1003C093C /* LoginView.swift */; };
 		FAD99C9A1F966998003C093C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD99C991F966998003C093C /* Extensions.swift */; };
+		FAD99C9C1F969363003C093C /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD99C9B1F969363003C093C /* SignupView.swift */; };
+		FAD99C9E1F969378003C093C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD99C9D1F969378003C093C /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		FAD99C931F965AA4003C093C /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		FAD99C971F9662F1003C093C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FAD99C991F966998003C093C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FAD99C9B1F969363003C093C /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		FAD99C9D1F969378003C093C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FF8987B70187BA09FE362C03 /* Pods_Macula.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Macula.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +132,8 @@
 				038897041F92B4C300B5BEA7 /* AppDelegate.swift */,
 				FAD99C991F966998003C093C /* Extensions.swift */,
 				038897061F92B4C300B5BEA7 /* ViewController.swift */,
+				FAD99C9B1F969363003C093C /* SignupView.swift */,
+				FAD99C9D1F969378003C093C /* SignupViewController.swift */,
 				FAD99C971F9662F1003C093C /* LoginView.swift */,
 				FAD99C911F965A61003C093C /* LoginViewController.swift */,
 				038897081F92B4C500B5BEA7 /* Main.storyboard */,
@@ -482,7 +488,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD99C9C1F969363003C093C /* SignupView.swift in Sources */,
 				FAD99C921F965A61003C093C /* LoginViewController.swift in Sources */,
+				FAD99C9E1F969378003C093C /* SignupViewController.swift in Sources */,
 				FAD99C9A1F966998003C093C /* Extensions.swift in Sources */,
 				038897071F92B4C300B5BEA7 /* ViewController.swift in Sources */,
 				0388970D1F92B4D200B5BEA7 /* Macula.xcdatamodeld in Sources */,
