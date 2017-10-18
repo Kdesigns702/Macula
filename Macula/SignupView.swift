@@ -8,44 +8,65 @@
 
 import UIKit
 
+protocol SignupViewDelegate: class {
+	func signupAction(firstName: String, lastName: String, email: String, password: String)
+	func loginAction()
+}
+
 class SignupView: UIView {
 
 	@IBOutlet var scrollView: UIScrollView!
-	@IBOutlet var facebookButton: UIButton!
-	@IBOutlet var googleButton: UIButton!
-	@IBOutlet var signupButton: UIButton!
 	@IBOutlet var firstNameTextField: UITextField!
 	@IBOutlet var lastNameTextField: UITextField!
 	@IBOutlet var emailTextField: UITextField!
 	@IBOutlet var passwordTextField: UITextField!
+	@IBOutlet var firstNameUnderlineView: UIView!
+	@IBOutlet var lastNameUnderlineView: UIView!
+	@IBOutlet var emailUnderlineView: UIView!
+	@IBOutlet var passwordUnderlineView: UIView!
+	@IBOutlet var facebookButton: UIButton!
+	@IBOutlet var googleButton: UIButton!
+	@IBOutlet var signupButton: UIButton!
 
+	weak var delegate: SignupViewDelegate?
+	
 	override func awakeFromNib() {
 		// setup keyboard behavior
 		enableAutomaticallyHideKeyboardOnTap()
 		scrollView.enableAutomaticallyAdjustContentInsetsForKeyboard()
 		
 		// custom style for buttons
-		for button in [ facebookButton!, googleButton! ] {
-			// round corners
-			button.layer.cornerRadius = button.bounds.height / 2
-			// shadow
-			button.layer.shadowColor = UIColor.black.withAlphaComponent(0.17).cgColor
-			button.layer.masksToBounds = false
-			button.layer.shadowOffset = CGSize(width: 0, height: 3)
-			button.layer.shadowRadius = 6
-			button.layer.shadowOpacity = 1
-		}
+		facebookButton.makeRoundButton()
+		googleButton.makeRoundButton()
 		
 		// signup button's border
-		signupButton.layer.borderColor = UIColor.RGB(0x0FA0C1).cgColor
-		signupButton.layer.borderWidth = 1
+		signupButton.makeBorderedButton()
 	}
 	
 	deinit {
 		scrollView.disableAutomaticallyAdjustContentInsetsForKeyboard()
 	}
 	
-	// MARK: - Actions
+	func activityIndicator(_ show: Bool) {
+		// TODO: show an indicator here
+		signupButton.isEnabled = !show
+	}
+
+	private func signupAction() {
+		// check email/password
+		guard let email = emailTextField.text, email.isContainValidEmail(),
+			let password = passwordTextField.text,  password.isContainText(),
+			let firstName = firstNameTextField.text, firstName.isContainText(),
+			let lastName = lastNameTextField.text, lastName.isContainText() else {
+			// TODO: show some error exclamation here
+			return
+		}
+		// hide keyboard and submit
+		dismissKeyboard()
+		delegate?.signupAction(firstName: firstName, lastName: lastName, email: email, password: password)
+	}
+	
+	// MARK: - Action: return key pressed
 	
 	@IBAction func firstNameTextFieldReturnKeyPressed(_ sender: Any) {
 		// jump to the last name field
@@ -63,8 +84,35 @@ class SignupView: UIView {
 	}
 	
 	@IBAction func passwordTextFieldReturnKeyPressed(_ sender: Any) {
-		// hide keyboard and submit
-		dismissKeyboard()
+		signupAction()
+	}
+	
+	// MARK: - Action: text changed
+	
+	@IBAction func firstNameTextFieldChanged(_ sender: Any) {
+		firstNameUnderlineView.backgroundColor = firstNameTextField.text!.isContainText() ? Config.UI.normalUnderlineViewColor : Config.UI.lightUnderlineViewColor
+	}
+
+	@IBAction func lastNameTextFieldChanged(_ sender: Any) {
+		lastNameUnderlineView.backgroundColor = lastNameTextField.text!.isContainText() ? Config.UI.normalUnderlineViewColor : Config.UI.lightUnderlineViewColor
+	}
+
+	@IBAction func emailTextFieldChanged(_ sender: Any) {
+		emailUnderlineView.backgroundColor = emailTextField.text!.isContainValidEmail() ? Config.UI.normalUnderlineViewColor : Config.UI.lightUnderlineViewColor
+	}
+
+	@IBAction func passwordTextFieldChanged(_ sender: Any) {
+		passwordUnderlineView.backgroundColor = passwordTextField.text!.isContainValidPassword() ? Config.UI.normalUnderlineViewColor : Config.UI.lightUnderlineViewColor
+	}
+
+	// MARK: - Action: button pressed
+
+	@IBAction func signupButtonPressed(_ sender: Any) {
+		signupAction()
+	}
+
+	@IBAction func loginButtonPressed(_ sender: Any) {
+		delegate?.loginAction()
 	}
 
 }

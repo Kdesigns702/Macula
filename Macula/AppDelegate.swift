@@ -15,11 +15,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // the status bar is hidden on startup, let's make it visible
+		// Initialize the backend
+		Backend.shared.configure()
+		let nc = NotificationCenter.default
+		nc.addObserver(self, selector: #selector(backendUserHasSignedIn(_:)), name: .backendUserHasSignedIn, object: nil)
+		nc.addObserver(self, selector: #selector(backendUserHasSignedOut), name: .backendUserHasSignedOut, object: nil)
+		
+		// The status bar is hidden on startup, let's make it visible
 		application.isStatusBarHidden = false
+		
+		// UI entry point. Initial root view controller is the same as launch screen.
+		// Showing that view controller and waiting for backend notifications.
+		window = UIWindow(frame: UIScreen.main.bounds)
+		if let window = window {
+			guard let controller = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController() else {
+				fatalError("Something weird with the launch screen")
+			}
+			window.rootViewController = controller
+			window.backgroundColor = UIColor.white
+			window.makeKeyAndVisible()
+		}
         return true
     }
-	
+
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -44,8 +62,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
-    // MARK: - Core Data stack
+	// MARK - Backend
 
+	@objc func backendUserHasSignedIn(_ notification: Notification) {
+		changeRootViewController(ViewController.controller())
+	}
+
+	@objc func backendUserHasSignedOut() {
+		changeRootViewController(LoginViewController.controller())
+	}
+	
+	// MARK - UI
+	
+	private func changeRootViewController(_ viewController: UIViewController) {
+		if let window = self.window {
+			if let snapshotView = window.snapshotView(afterScreenUpdates: true) {
+				if let view = viewController.view {
+					view.addSubview(snapshotView)
+					UIView.animate(withDuration: 0.25, animations: {
+						snapshotView.layer.opacity = 0
+					}, completion: { _ in
+						snapshotView.removeFromSuperview()
+					})
+				}
+			}
+			window.rootViewController = viewController
+		}
+	}
+	
+    // MARK: - Core Data stack
+	
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation

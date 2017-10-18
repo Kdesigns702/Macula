@@ -10,30 +10,40 @@ import UIKit
 
 class SignupViewController: UIViewController {
 
+	class func controller() -> SignupViewController {
+		let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+		return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! SignupViewController
+	}
+
+	private var mainView: SignupView {
+		return view as! SignupView
+	}
+
 	override var preferredStatusBarStyle: UIStatusBarStyle {
 		return .lightContent
 	}
-
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		mainView.delegate = self
     }
+	
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+extension SignupViewController: SignupViewDelegate {
+	
+	// MARK: - SignupViewDelegate
+	
+	func signupAction(firstName: String, lastName: String, email: String, password: String) {
+		mainView.activityIndicator(true)
+		Backend.shared.signUp(firstName: firstName, lastName: lastName, email: email, password: password) { user, error in
+			print(String(describing: error))
+			self.mainView.activityIndicator(false)
+		}
+	}
+	
+	func loginAction() {
+		dismiss(animated: true, completion: nil)
+	}
 
 }

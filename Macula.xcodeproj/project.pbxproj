@@ -18,6 +18,9 @@
 		CA8CAE0B1586C9EF6E76E3D0 /* Pods_MaculaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91694EDDA01E96B2D2B12008 /* Pods_MaculaUITests.framework */; };
 		EDF17E7C3485BF2B3F6C0D93 /* Pods_Macula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8987B70187BA09FE362C03 /* Pods_Macula.framework */; };
 		F510A322B5D5E6922548EBE4 /* Pods_MaculaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FE3D5B26D8B5D59A81022D /* Pods_MaculaTests.framework */; };
+		FA3AD47D1F9754D70000CB41 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AD47C1F9754D70000CB41 /* Backend.swift */; };
+		FAB611261F976E78005C0490 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 038897351F92B60900B5BEA7 /* GoogleService-Info.plist */; };
+		FAB611281F97A3D8005C0490 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB611271F97A3D8005C0490 /* Config.swift */; };
 		FAD99C921F965A61003C093C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD99C911F965A61003C093C /* LoginViewController.swift */; };
 		FAD99C941F965AA4003C093C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD99C931F965AA4003C093C /* Auth.storyboard */; };
 		FAD99C981F9662F1003C093C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD99C971F9662F1003C093C /* LoginView.swift */; };
@@ -67,6 +70,8 @@
 		A33EDE4845464B33849F9DAA /* Pods-Macula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macula.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macula/Pods-Macula.debug.xcconfig"; sourceTree = "<group>"; };
 		B0F80719B6ED5C6998D81B63 /* Pods-MaculaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaculaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaculaTests/Pods-MaculaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF656E5EB508C544DF37374A /* Pods-MaculaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaculaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaculaUITests/Pods-MaculaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA3AD47C1F9754D70000CB41 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		FAB611271F97A3D8005C0490 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FAD99C911F965A61003C093C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAD99C931F965AA4003C093C /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		FAD99C971F9662F1003C093C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -129,6 +134,8 @@
 		038897031F92B4C200B5BEA7 /* Macula */ = {
 			isa = PBXGroup;
 			children = (
+				FAB611271F97A3D8005C0490 /* Config.swift */,
+				FA3AD47C1F9754D70000CB41 /* Backend.swift */,
 				038897041F92B4C300B5BEA7 /* AppDelegate.swift */,
 				FAD99C991F966998003C093C /* Extensions.swift */,
 				038897061F92B4C300B5BEA7 /* ViewController.swift */,
@@ -304,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB611261F976E78005C0490 /* GoogleService-Info.plist in Resources */,
 				FAD99C941F965AA4003C093C /* Auth.storyboard in Resources */,
 				038897121F92B4D600B5BEA7 /* LaunchScreen.storyboard in Resources */,
 				0388970F1F92B4D500B5BEA7 /* Assets.xcassets in Resources */,
@@ -501,10 +509,12 @@
 			files = (
 				FAD99C9C1F969363003C093C /* SignupView.swift in Sources */,
 				FAD99C921F965A61003C093C /* LoginViewController.swift in Sources */,
+				FA3AD47D1F9754D70000CB41 /* Backend.swift in Sources */,
 				FAD99C9E1F969378003C093C /* SignupViewController.swift in Sources */,
 				FAD99C9A1F966998003C093C /* Extensions.swift in Sources */,
 				038897071F92B4C300B5BEA7 /* ViewController.swift in Sources */,
 				0388970D1F92B4D200B5BEA7 /* Macula.xcdatamodeld in Sources */,
+				FAB611281F97A3D8005C0490 /* Config.swift in Sources */,
 				FAD99C981F9662F1003C093C /* LoginView.swift in Sources */,
 				038897051F92B4C300B5BEA7 /* AppDelegate.swift in Sources */,
 			);

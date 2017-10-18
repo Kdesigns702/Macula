@@ -8,6 +8,45 @@
 
 import UIKit
 
+extension UIButton {
+	
+	func makeRoundButton() {
+		// round corners
+		layer.cornerRadius = bounds.height / 2
+		// shadow
+		layer.shadowColor = Config.UI.buttonShadowColor.cgColor
+		layer.masksToBounds = false
+		layer.shadowOffset = CGSize(width: 0, height: 3)
+		layer.shadowRadius = 6
+		layer.shadowOpacity = 1
+	}
+	
+	func makeBorderedButton() {
+		layer.borderColor = Config.UI.buttonBorderColor.cgColor
+		layer.borderWidth = 1
+	}
+	
+}
+
+extension String {
+	
+	func isContainValidEmail() -> Bool {
+		let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+		return NSPredicate(format:"SELF MATCHES %@", emailRegEx).evaluate(with: self)
+	}
+	
+	func isContainValidPassword() -> Bool {
+		// TODO: add rules for passwords
+		let trimmedText = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+		return trimmedText.characters.count >= 6
+	}
+	
+	func isContainText() -> Bool {
+		return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).characters.count > 0
+	}
+	
+}
+
 extension UIColor {
 	
 	static func RGB(_ rgbValue: UInt) -> UIColor {
@@ -48,8 +87,6 @@ extension UIScrollView {
 		// reset bottom content inset
 		contentInset.bottom = 0
 	}
-	
-	
 
 }
 

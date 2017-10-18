@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OPm-H0-Nn1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,7 +21,7 @@
         <!--Login View Controller-->
         <scene sceneID="xvh-Eb-IBr">
             <objects>
-                <viewController id="VaX-Wa-fUK" customClass="LoginViewController" customModule="Macula" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VaX-Wa-fUK" customClass="LoginViewController" customModule="Macula" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mwR-8q-GwH" customClass="LoginView" customModule="Macula" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,9 @@
                                                         <state key="normal" title="Sign Up">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="signupButtonPressed:" destination="mwR-8q-GwH" eventType="touchUpInside" id="tQu-FQ-pmK"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -99,10 +102,13 @@
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginButtonPressed:" destination="mwR-8q-GwH" eventType="touchUpInside" id="DBC-NK-Gj0"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9f-IT-xu4">
                                                 <rect key="frame" x="39.5" y="319" width="297" height="3"/>
-                                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="q7F-fu-ng7"/>
                                                     <constraint firstAttribute="width" constant="297" id="uoV-B3-gx9"/>
@@ -110,7 +116,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liq-fK-yCS">
                                                 <rect key="frame" x="39.5" y="264" width="297" height="3"/>
-                                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="297" id="9xD-R3-cuh"/>
                                                     <constraint firstAttribute="height" constant="3" id="HuU-R4-8dn"/>
@@ -126,6 +132,7 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                 <connections>
+                                                    <action selector="passwordTextFieldChanged:" destination="mwR-8q-GwH" eventType="editingChanged" id="ktg-Ox-mXy"/>
                                                     <action selector="passwordTextFieldReturnKeyPressed:" destination="mwR-8q-GwH" eventType="editingDidEndOnExit" id="wQD-o0-urR"/>
                                                 </connections>
                                             </textField>
@@ -139,6 +146,7 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                                 <connections>
+                                                    <action selector="emailTextFieldChanged:" destination="mwR-8q-GwH" eventType="editingChanged" id="415-Uw-RJc"/>
                                                     <action selector="emailTextFieldReturnKeyPressed:" destination="mwR-8q-GwH" eventType="editingDidEndOnExit" id="ZHf-Tu-3f3"/>
                                                 </connections>
                                             </textField>
@@ -234,10 +242,12 @@
                         <viewLayoutGuide key="safeArea" id="5Nc-gM-CLr"/>
                         <connections>
                             <outlet property="emailTextField" destination="e6w-CO-9yd" id="r9N-sl-1sb"/>
+                            <outlet property="emailUnderlineView" destination="liq-fK-yCS" id="EMA-HP-Twy"/>
                             <outlet property="facebookButton" destination="QQe-BO-XNv" id="PWM-NM-pj4"/>
                             <outlet property="googleButton" destination="D1t-wG-G7B" id="noY-ci-ykl"/>
                             <outlet property="loginButton" destination="tdW-3U-c4H" id="7Wv-jb-AlR"/>
                             <outlet property="passwordTextField" destination="MqW-Eg-QUi" id="qvY-eQ-cd9"/>
+                            <outlet property="passwordUnderlineView" destination="q9f-IT-xu4" id="ePK-P9-tF5"/>
                             <outlet property="scrollView" destination="BYq-66-MSE" id="69a-bc-R5h"/>
                         </connections>
                     </view>
@@ -249,7 +259,7 @@
         <!--Signup View Controller-->
         <scene sceneID="gLb-Ie-DMe">
             <objects>
-                <viewController id="OPm-H0-Nn1" customClass="SignupViewController" customModule="Macula" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OPm-H0-Nn1" customClass="SignupViewController" customModule="Macula" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NfT-eY-lQo" customClass="SignupView" customModule="Macula" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,6 +288,9 @@
                                                         <state key="normal" title="Log In">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="loginButtonPressed:" destination="NfT-eY-lQo" eventType="touchUpInside" id="kdR-AJ-WIf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -316,10 +329,13 @@
                                                 <state key="normal" title="Create Account">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signupButtonPressed:" destination="NfT-eY-lQo" eventType="touchUpInside" id="Ytv-fU-i65"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kde-Xa-t3N">
                                                 <rect key="frame" x="39.5" y="319.5" width="297" height="3"/>
-                                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="9Te-9q-hiO"/>
                                                     <constraint firstAttribute="width" constant="297" id="j9D-Rp-Afi"/>
@@ -327,7 +343,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjh-EH-sgH">
                                                 <rect key="frame" x="39.5" y="264.5" width="297" height="3"/>
-                                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="IU8-Nv-D3a"/>
                                                     <constraint firstAttribute="width" constant="297" id="LtV-6o-E9p"/>
@@ -335,7 +351,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pI5-bx-Swt">
                                                 <rect key="frame" x="39.5" y="209.5" width="297" height="3"/>
-                                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="297" id="6vq-QW-Flf"/>
                                                     <constraint firstAttribute="height" constant="3" id="I0s-Ob-uut"/>
@@ -343,7 +359,7 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="is1-e4-tyc">
                                                 <rect key="frame" x="39.5" y="154.5" width="297" height="3"/>
-                                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="0.34999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="ILp-oW-NLu"/>
                                                     <constraint firstAttribute="width" constant="297" id="JUp-nv-YWt"/>
@@ -359,6 +375,7 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                 <connections>
+                                                    <action selector="passwordTextFieldChanged:" destination="NfT-eY-lQo" eventType="editingChanged" id="lDH-xc-51e"/>
                                                     <action selector="passwordTextFieldReturnKeyPressed:" destination="mwR-8q-GwH" eventType="editingDidEndOnExit" id="ARF-r1-fGe"/>
                                                     <action selector="passwordTextFieldReturnKeyPressed:" destination="NfT-eY-lQo" eventType="editingDidEndOnExit" id="oxa-cA-ynq"/>
                                                 </connections>
@@ -373,6 +390,7 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                                 <connections>
+                                                    <action selector="emailTextFieldChanged:" destination="NfT-eY-lQo" eventType="editingChanged" id="BC5-ar-OJf"/>
                                                     <action selector="emailTextFieldReturnKeyPressed:" destination="NfT-eY-lQo" eventType="editingDidEndOnExit" id="DAc-jn-aRO"/>
                                                     <action selector="emailTextFieldReturnKeyPressed:" destination="mwR-8q-GwH" eventType="editingDidEndOnExit" id="OLQ-DF-wYI"/>
                                                 </connections>
@@ -388,6 +406,7 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <connections>
                                                     <action selector="emailTextFieldReturnKeyPressed:" destination="mwR-8q-GwH" eventType="editingDidEndOnExit" id="pef-Ny-TwJ"/>
+                                                    <action selector="lastNameTextFieldChanged:" destination="NfT-eY-lQo" eventType="editingChanged" id="uEa-VP-ODD"/>
                                                     <action selector="lastNameTextFieldReturnKeyPressed:" destination="NfT-eY-lQo" eventType="editingDidEndOnExit" id="UYO-ZQ-r8R"/>
                                                 </connections>
                                             </textField>
@@ -422,7 +441,7 @@
                                                     <constraint firstItem="K2D-aX-8HM" firstAttribute="top" secondItem="eBs-eW-k5I" secondAttribute="top" constant="8" id="jfs-pC-z8S"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="center" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eR1-Ig-DBg">
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eR1-Ig-DBg">
                                                 <rect key="frame" x="101.5" y="48" width="173" height="54.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="center" image="Macula-login-logo" translatesAutoresizingMaskIntoConstraints="NO" id="32O-ji-sbg">
@@ -477,6 +496,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                                 <connections>
                                                     <action selector="emailTextFieldReturnKeyPressed:" destination="mwR-8q-GwH" eventType="editingDidEndOnExit" id="e9Q-nJ-2iz"/>
+                                                    <action selector="firstNameTextFieldChanged:" destination="NfT-eY-lQo" eventType="editingChanged" id="22A-mU-twW"/>
                                                     <action selector="firstNameTextFieldReturnKeyPressed:" destination="NfT-eY-lQo" eventType="editingDidEndOnExit" id="auf-qQ-kmQ"/>
                                                 </connections>
                                             </textField>
@@ -541,11 +561,15 @@
                         <viewLayoutGuide key="safeArea" id="VCe-g3-m72"/>
                         <connections>
                             <outlet property="emailTextField" destination="ILM-FM-JXC" id="OCS-FF-bOm"/>
+                            <outlet property="emailUnderlineView" destination="Pjh-EH-sgH" id="4II-Is-EeR"/>
                             <outlet property="facebookButton" destination="QPM-kv-FeQ" id="VAC-Ib-z76"/>
                             <outlet property="firstNameTextField" destination="FZ9-Qw-OSf" id="jb7-66-dpc"/>
+                            <outlet property="firstNameUnderlineView" destination="is1-e4-tyc" id="oYX-UA-E2U"/>
                             <outlet property="googleButton" destination="ic7-3q-wqx" id="PwA-Ee-QTK"/>
                             <outlet property="lastNameTextField" destination="m6Q-yI-JDW" id="UB6-nF-FTn"/>
+                            <outlet property="lastNameUnderlineView" destination="pI5-bx-Swt" id="cTE-Ac-9YM"/>
                             <outlet property="passwordTextField" destination="hyR-XT-LMy" id="qWg-XP-hg5"/>
+                            <outlet property="passwordUnderlineView" destination="Kde-Xa-t3N" id="E1u-EY-g37"/>
                             <outlet property="scrollView" destination="gMN-gK-ZJg" id="1dG-vb-aTw"/>
                             <outlet property="signupButton" destination="Kl2-Hr-2Ca" id="7Mc-0l-Vje"/>
                         </connections>
@@ -553,7 +577,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQM-iM-afH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095.2" y="162.3688155922039"/>
+            <point key="canvasLocation" x="962" y="159"/>
         </scene>
     </scenes>
     <resources>

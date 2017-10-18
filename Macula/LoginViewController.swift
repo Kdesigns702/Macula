@@ -9,29 +9,43 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+	
+	class func controller() -> LoginViewController {
+		let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+		return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! LoginViewController
+	}
+	
+	private var mainView: LoginView {
+		return view as! LoginView
+	}
+	
 	override var preferredStatusBarStyle: UIStatusBarStyle {
 		return .lightContent
 	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		mainView.delegate = self
 	}
 	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+}
+
+extension LoginViewController: LoginViewDelegate {
+	
+	// MARK: - LoginViewDelegate
+	
+	func loginAction(email: String, password: String) {
+		mainView.activityIndicator(true)
+		Backend.shared.logIn(email: email, password: password) { user, error in
+			print(String(describing: error))
+			self.mainView.activityIndicator(false)
+		}
 	}
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	
+	func signupAction() {
+		let controller = SignupViewController.controller()
+		controller.modalTransitionStyle = .flipHorizontal
+		present(controller, animated: true, completion: nil)
+	}
 
 }

@@ -9,15 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+	
+	@IBOutlet var userIdLabel: UILabel!
+
+	class func controller() -> ViewController {
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! ViewController
+	}
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        userIdLabel.text = Backend.shared.userId
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+	@IBAction func logOutButtonPressed(_ sender: Any) {
+		Backend.shared.logOut()
+	}
 
 }

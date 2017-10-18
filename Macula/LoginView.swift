@@ -8,50 +8,85 @@
 
 import UIKit
 
+protocol LoginViewDelegate: class {
+	func loginAction(email: String, password: String)
+	func signupAction()
+}
+
 class LoginView: UIView {
 	@IBOutlet var scrollView: UIScrollView!
-	@IBOutlet var facebookButton: UIButton!
-	@IBOutlet var googleButton: UIButton!
-	@IBOutlet var loginButton: UIButton!
 	@IBOutlet var emailTextField: UITextField!
 	@IBOutlet var passwordTextField: UITextField!
-	
+	@IBOutlet var emailUnderlineView: UIView!
+	@IBOutlet var passwordUnderlineView: UIView!
+	@IBOutlet var loginButton: UIButton!
+	@IBOutlet var facebookButton: UIButton!
+	@IBOutlet var googleButton: UIButton!
+
+	weak var delegate: LoginViewDelegate?
+
 	override func awakeFromNib() {
 		// setup keyboard behavior
 		enableAutomaticallyHideKeyboardOnTap()
 		scrollView.enableAutomaticallyAdjustContentInsetsForKeyboard()
 
 		// custom style for buttons
-		for button in [ facebookButton!, googleButton! ] {
-			// round corners
-			button.layer.cornerRadius = button.bounds.height / 2
-			// shadow
-			button.layer.shadowColor = UIColor.black.withAlphaComponent(0.17).cgColor
-			button.layer.masksToBounds = false
-			button.layer.shadowOffset = CGSize(width: 0, height: 3)
-			button.layer.shadowRadius = 6
-			button.layer.shadowOpacity = 1
-		}
+		facebookButton.makeRoundButton()
+		googleButton.makeRoundButton()
 		
 		// login button's border
-		loginButton.layer.borderColor = UIColor.RGB(0x0FA0C1).cgColor
-		loginButton.layer.borderWidth = 1
+		loginButton.makeBorderedButton()
 	}
 	
 	deinit {
 		scrollView.disableAutomaticallyAdjustContentInsetsForKeyboard()
 	}
-	
-	// MARK: - Actions
-	
+
+	func activityIndicator(_ show: Bool) {
+		// TODO: show an indicator here
+		loginButton.isEnabled = !show
+	}
+
+	private func loginAction() {
+		// check email/password
+		guard let email = emailTextField.text, let password = passwordTextField.text, email.isContainValidEmail(), password.isContainText() else {
+			// TODO: show some error exclamation here
+			return
+		}
+		// hide keyboard and submit
+		dismissKeyboard()
+		delegate?.loginAction(email: email, password: password)
+	}
+
+	// MARK: - Action: return key pressed
+
 	@IBAction func emailTextFieldReturnKeyPressed(_ sender: Any) {
 		// jump to the next field
 		passwordTextField.becomeFirstResponder()
 	}
-
+	
 	@IBAction func passwordTextFieldReturnKeyPressed(_ sender: Any) {
-		// hide keyboard and submit
-		dismissKeyboard()
+		loginAction()
+	}
+
+	// MARK: - Action: text changed
+
+	@IBAction func passwordTextFieldChanged(_ sender: Any) {
+		passwordUnderlineView.backgroundColor = passwordTextField.text!.isContainText() ? Config.UI.normalUnderlineViewColor : Config.UI.lightUnderlineViewColor
+	}
+	
+	@IBAction func emailTextFieldChanged(_ sender: Any) {
+		emailUnderlineView.backgroundColor = emailTextField.text!.isContainValidEmail() ? Config.UI.normalUnderlineViewColor : Config.UI.lightUnderlineViewColor
+	}
+
+	// MARK: - Action: button pressed
+
+	@IBAction func loginButtonPressed(_ sender: Any) {
+		loginAction()
+	}
+
+	@IBAction func signupButtonPressed(_ sender: Any) {
+		delegate?.signupAction()
 	}
 
 }
