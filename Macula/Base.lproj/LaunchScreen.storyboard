@@ -18,64 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snazzy-image" translatesAutoresizingMaskIntoConstraints="NO" id="zyG-pe-aTW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="683"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZP-G6-Bah">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_bg" translatesAutoresizingMaskIntoConstraints="NO" id="zyG-pe-aTW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.70196078431372544" blue="0.82745098039215681" alpha="0.68000000000000005" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvM-Gc-v6H">
-                                <rect key="frame" x="0.0" y="260" width="375" height="147"/>
-                                <color key="backgroundColor" red="0.12549019607843137" green="0.6588235294117647" blue="0.7803921568627451" alpha="0.42999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Macula Logo" translatesAutoresizingMaskIntoConstraints="NO" id="oq2-ev-y7j">
-                                <rect key="frame" x="52" y="297" width="270" height="73"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rnh-LK-To2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j8r-js-5hj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fR-9I-22N">
-                                <rect key="frame" x="0.0" y="407" width="375" height="260"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XyE-3a-XPx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Macula Logo" translatesAutoresizingMaskIntoConstraints="NO" id="oq2-ev-y7j">
+                                <rect key="frame" x="52.5" y="297" width="270" height="73"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gZP-G6-Bah" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1S6-G2-dj1"/>
-                            <constraint firstItem="5fR-9I-22N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Y6-xd-vn0"/>
-                            <constraint firstItem="LvM-Gc-v6H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="44O-WL-MrR"/>
-                            <constraint firstAttribute="bottom" secondItem="zyG-pe-aTW" secondAttribute="bottom" constant="-16" id="4Bc-lc-Q1D"/>
-                            <constraint firstItem="5fR-9I-22N" firstAttribute="top" secondItem="LvM-Gc-v6H" secondAttribute="bottom" id="4zR-zu-4Ze"/>
+                            <constraint firstAttribute="bottom" secondItem="zyG-pe-aTW" secondAttribute="bottom" id="4Bc-lc-Q1D"/>
                             <constraint firstItem="zyG-pe-aTW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="64L-UB-9mK"/>
-                            <constraint firstItem="LvM-Gc-v6H" firstAttribute="top" secondItem="Rnh-LK-To2" secondAttribute="bottom" id="Hu7-03-5KF"/>
                             <constraint firstItem="oq2-ev-y7j" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Lkg-JS-7nO"/>
                             <constraint firstItem="oq2-ev-y7j" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="RuZ-jG-75D"/>
-                            <constraint firstItem="gZP-G6-Bah" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aRT-JI-ybZ"/>
-                            <constraint firstItem="Rnh-LK-To2" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ak9-JA-kKN"/>
-                            <constraint firstItem="gZP-G6-Bah" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bjB-b1-p8b"/>
-                            <constraint firstItem="5fR-9I-22N" firstAttribute="top" secondItem="oq2-ev-y7j" secondAttribute="bottom" constant="37" id="c2U-n6-wh9"/>
-                            <constraint firstItem="Rnh-LK-To2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dJI-t5-BdK"/>
-                            <constraint firstItem="5fR-9I-22N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eRV-S5-PRj"/>
-                            <constraint firstItem="LvM-Gc-v6H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="i6T-u0-V73"/>
-                            <constraint firstItem="LvM-Gc-v6H" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="lj6-Gh-7HD"/>
-                            <constraint firstItem="oq2-ev-y7j" firstAttribute="top" secondItem="Rnh-LK-To2" secondAttribute="bottom" constant="37" id="ol1-sK-yru"/>
-                            <constraint firstItem="gZP-G6-Bah" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="tDV-If-kjP"/>
-                            <constraint firstItem="Rnh-LK-To2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tY1-3g-Ga9"/>
-                            <constraint firstItem="5fR-9I-22N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zNb-bo-QpG"/>
                             <constraint firstAttribute="trailing" secondItem="zyG-pe-aTW" secondAttribute="trailing" id="zc0-yX-rZL"/>
                             <constraint firstItem="zyG-pe-aTW" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="zmg-h2-Cne"/>
                         </constraints>
@@ -89,6 +44,6 @@
     </scenes>
     <resources>
         <image name="Macula Logo" width="270" height="73"/>
-        <image name="snazzy-image" width="375" height="667"/>
+        <image name="launch_screen_bg" width="375" height="667"/>
     </resources>
 </document>
