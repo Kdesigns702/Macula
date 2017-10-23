@@ -9,6 +9,7 @@ target 'Macula' do
   pod 'Firebase/Auth'
   pod 'Firebase/Crash'
   pod 'Firebase/Database'
+  pod 'PKHUD', '~> 5.0'
 
   target 'MaculaTests' do
     inherit! :search_paths

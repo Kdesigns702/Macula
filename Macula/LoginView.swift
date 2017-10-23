@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 protocol LoginViewDelegate: class {
 	func loginAction(email: String, password: String)
@@ -43,8 +44,12 @@ class LoginView: UIView {
 	}
 
 	func activityIndicator(_ show: Bool) {
-		// TODO: show an indicator here
-		loginButton.isEnabled = !show
+		if show {
+			HUD.show(.systemActivity)
+		}
+		else {
+			HUD.hide()
+		}
 	}
 
 	private func loginAction() {

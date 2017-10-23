@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 protocol SignupViewDelegate: class {
 	func signupAction(firstName: String, lastName: String, email: String, password: String)
@@ -42,14 +43,18 @@ class SignupView: UIView {
 		// signup button's border
 		signupButton.makeBorderedButton()
 	}
-	
+
 	deinit {
 		scrollView.disableAutomaticallyAdjustContentInsetsForKeyboard()
 	}
-	
+
 	func activityIndicator(_ show: Bool) {
-		// TODO: show an indicator here
-		signupButton.isEnabled = !show
+		if show {
+			HUD.show(.systemActivity)
+		}
+		else {
+			HUD.hide()
+		}
 	}
 
 	private func signupAction() {
