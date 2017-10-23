@@ -51,7 +51,7 @@ class Backend: NSObject {
 			completion(user, error)
 		}
 	}
-	
+
 	func logOut() {
 		_ = try? Auth.auth().signOut()
 	}
@@ -64,7 +64,10 @@ class Backend: NSObject {
 				let changeRequest = user.createProfileChangeRequest()
 				changeRequest.displayName = "\(firstName) \(lastName)"
 				changeRequest.commitChanges { (error) in
-					completion(user, error)
+					// update a profile in the database
+					Profile(userId: self.userId, first: firstName, last: lastName, email: email).update { error in
+						completion(user, error)
+					}
 				}
 			}
 			else {

@@ -18,6 +18,8 @@
 		CA8CAE0B1586C9EF6E76E3D0 /* Pods_MaculaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91694EDDA01E96B2D2B12008 /* Pods_MaculaUITests.framework */; };
 		EDF17E7C3485BF2B3F6C0D93 /* Pods_Macula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8987B70187BA09FE362C03 /* Pods_Macula.framework */; };
 		F510A322B5D5E6922548EBE4 /* Pods_MaculaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FE3D5B26D8B5D59A81022D /* Pods_MaculaTests.framework */; };
+		FA08143D1F9E0EFE00BC6363 /* DatabaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08143C1F9E0EFE00BC6363 /* DatabaseObject.swift */; };
+		FA08143F1F9E0F9700BC6363 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08143E1F9E0F9700BC6363 /* Profile.swift */; };
 		FA3AD47D1F9754D70000CB41 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AD47C1F9754D70000CB41 /* Backend.swift */; };
 		FAB611261F976E78005C0490 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 038897351F92B60900B5BEA7 /* GoogleService-Info.plist */; };
 		FAB611281F97A3D8005C0490 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB611271F97A3D8005C0490 /* Config.swift */; };
@@ -70,6 +72,8 @@
 		A33EDE4845464B33849F9DAA /* Pods-Macula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Macula.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Macula/Pods-Macula.debug.xcconfig"; sourceTree = "<group>"; };
 		B0F80719B6ED5C6998D81B63 /* Pods-MaculaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaculaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaculaTests/Pods-MaculaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF656E5EB508C544DF37374A /* Pods-MaculaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaculaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaculaUITests/Pods-MaculaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA08143C1F9E0EFE00BC6363 /* DatabaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseObject.swift; sourceTree = "<group>"; };
+		FA08143E1F9E0F9700BC6363 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		FA3AD47C1F9754D70000CB41 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		FAB611271F97A3D8005C0490 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FAD99C911F965A61003C093C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -134,8 +138,10 @@
 		038897031F92B4C200B5BEA7 /* Macula */ = {
 			isa = PBXGroup;
 			children = (
-				FAB611271F97A3D8005C0490 /* Config.swift */,
+				FA08143C1F9E0EFE00BC6363 /* DatabaseObject.swift */,
+				FA08143E1F9E0F9700BC6363 /* Profile.swift */,
 				FA3AD47C1F9754D70000CB41 /* Backend.swift */,
+				FAB611271F97A3D8005C0490 /* Config.swift */,
 				038897041F92B4C300B5BEA7 /* AppDelegate.swift */,
 				FAD99C991F966998003C093C /* Extensions.swift */,
 				038897061F92B4C300B5BEA7 /* ViewController.swift */,
@@ -510,7 +516,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD99C9C1F969363003C093C /* SignupView.swift in Sources */,
+				FA08143F1F9E0F9700BC6363 /* Profile.swift in Sources */,
 				FAD99C921F965A61003C093C /* LoginViewController.swift in Sources */,
+				FA08143D1F9E0EFE00BC6363 /* DatabaseObject.swift in Sources */,
 				FA3AD47D1F9754D70000CB41 /* Backend.swift in Sources */,
 				FAD99C9E1F969378003C093C /* SignupViewController.swift in Sources */,
 				FAD99C9A1F966998003C093C /* Extensions.swift in Sources */,
