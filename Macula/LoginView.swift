@@ -48,11 +48,18 @@ class LoginView: UIView {
 	}
 
 	private func loginAction() {
-		// check email/password
-		guard let email = emailTextField.text, let password = passwordTextField.text, email.isContainValidEmail(), password.isContainText() else {
-			// TODO: show some error exclamation here
+		// check email
+		guard let email = emailTextField.text, email.isContainValidEmail() else {
+			emailUnderlineView.shake()
 			return
 		}
+
+		// check password
+		guard let password = passwordTextField.text,  password.isContainText() else {
+			passwordUnderlineView.shake()
+			return
+		}
+
 		// hide keyboard and submit
 		dismissKeyboard()
 		delegate?.loginAction(email: email, password: password)

@@ -37,8 +37,10 @@ extension LoginViewController: LoginViewDelegate {
 	func loginAction(email: String, password: String) {
 		mainView.activityIndicator(true)
 		Backend.shared.logIn(email: email, password: password) { user, error in
-			print(String(describing: error))
 			self.mainView.activityIndicator(false)
+			if let error = error {
+				UIAlertController.showError(error, controller: self)
+			}
 		}
 	}
 	

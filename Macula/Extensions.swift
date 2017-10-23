@@ -8,6 +8,30 @@
 
 import UIKit
 
+extension UIView {
+
+	func shake() {
+		let shake = CABasicAnimation(keyPath: "position")
+		shake.duration = 0.1
+		shake.repeatCount = 2
+		shake.autoreverses = true
+		shake.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 4, y: self.center.y))
+		shake.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 4, y: self.center.y))
+		self.layer.add(shake, forKey: "shake")
+	}
+
+}
+
+extension UIAlertController {
+
+	class func showError(_ error: Error, controller: UIViewController, completion: (() -> Void)? = nil) {
+		let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+		alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { action -> Void in completion?() })
+		controller.present(alert, animated: true, completion: nil)
+	}
+
+}
+
 extension UIButton {
 	
 	func makeRoundButton() {

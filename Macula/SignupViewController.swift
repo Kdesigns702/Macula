@@ -31,17 +31,19 @@ class SignupViewController: UIViewController {
 }
 
 extension SignupViewController: SignupViewDelegate {
-	
+
 	// MARK: - SignupViewDelegate
-	
+
 	func signupAction(firstName: String, lastName: String, email: String, password: String) {
 		mainView.activityIndicator(true)
 		Backend.shared.signUp(firstName: firstName, lastName: lastName, email: email, password: password) { user, error in
-			print(String(describing: error))
 			self.mainView.activityIndicator(false)
+			if let error = error {
+				UIAlertController.showError(error, controller: self)
+			}
 		}
 	}
-	
+
 	func loginAction() {
 		dismiss(animated: true, completion: nil)
 	}

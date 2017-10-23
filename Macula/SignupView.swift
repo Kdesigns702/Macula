@@ -53,14 +53,30 @@ class SignupView: UIView {
 	}
 
 	private func signupAction() {
-		// check email/password
-		guard let email = emailTextField.text, email.isContainValidEmail(),
-			let password = passwordTextField.text,  password.isContainText(),
-			let firstName = firstNameTextField.text, firstName.isContainText(),
-			let lastName = lastNameTextField.text, lastName.isContainText() else {
-			// TODO: show some error exclamation here
+		// check first name
+		guard let firstName = firstNameTextField.text, firstName.isContainText() else {
+			firstNameUnderlineView.shake()
 			return
 		}
+
+		// check last name
+		guard let lastName = lastNameTextField.text, lastName.isContainText() else {
+			lastNameUnderlineView.shake()
+			return
+		}
+
+		// check email
+		guard let email = emailTextField.text, email.isContainValidEmail() else {
+			emailUnderlineView.shake()
+			return
+		}
+
+		// check password
+		guard let password = passwordTextField.text,  password.isContainValidPassword() else {
+			passwordUnderlineView.shake()
+			return
+		}
+
 		// hide keyboard and submit
 		dismissKeyboard()
 		delegate?.signupAction(firstName: firstName, lastName: lastName, email: email, password: password)
