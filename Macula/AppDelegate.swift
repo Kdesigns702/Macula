@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	// MARK - Backend
 
 	@objc func backendUserHasSignedIn(_ notification: Notification) {
-		changeRootViewController(ViewController.controller())
+		changeRootViewController(MapViewController.controller())
 	}
 
 	@objc func backendUserHasSignedOut() {

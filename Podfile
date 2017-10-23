@@ -10,6 +10,7 @@ target 'Macula' do
   pod 'Firebase/Crash'
   pod 'Firebase/Database'
   pod 'PKHUD', '~> 5.0'
+  pod 'Mapbox-iOS-SDK', '~> 3.6'
 
   target 'MaculaTests' do
     inherit! :search_paths

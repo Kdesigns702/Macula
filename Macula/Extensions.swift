@@ -20,6 +20,15 @@ extension UIView {
 		self.layer.add(shake, forKey: "shake")
 	}
 
+	func addShadow() {
+		// shadow
+		layer.shadowColor = Config.UI.shadowColor.cgColor
+		layer.masksToBounds = false
+		layer.shadowOffset = CGSize(width: 0, height: 3)
+		layer.shadowRadius = 6
+		layer.shadowOpacity = 1
+	}
+
 }
 
 extension UIAlertController {
@@ -30,26 +39,29 @@ extension UIAlertController {
 		controller.present(alert, animated: true, completion: nil)
 	}
 
+	class func confirmAction(_ message: String, action: String, controller: UIViewController, confirm: @escaping () -> Void) {
+		let alert: UIAlertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: action, style: .default) { action -> Void in confirm() })
+		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+		controller.present(alert, animated: true, completion: nil)
+	}
+
 }
 
 extension UIButton {
-	
+
 	func makeRoundButton() {
 		// round corners
 		layer.cornerRadius = bounds.height / 2
 		// shadow
-		layer.shadowColor = Config.UI.buttonShadowColor.cgColor
-		layer.masksToBounds = false
-		layer.shadowOffset = CGSize(width: 0, height: 3)
-		layer.shadowRadius = 6
-		layer.shadowOpacity = 1
+		addShadow()
 	}
-	
+
 	func makeBorderedButton() {
 		layer.borderColor = Config.UI.buttonBorderColor.cgColor
 		layer.borderWidth = 1
 	}
-	
+
 }
 
 extension String {

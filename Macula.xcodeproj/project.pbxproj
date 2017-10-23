@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		038897051F92B4C300B5BEA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038897041F92B4C300B5BEA7 /* AppDelegate.swift */; };
-		038897071F92B4C300B5BEA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038897061F92B4C300B5BEA7 /* ViewController.swift */; };
+		038897071F92B4C300B5BEA7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038897061F92B4C300B5BEA7 /* MapViewController.swift */; };
 		0388970A1F92B4C500B5BEA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038897081F92B4C500B5BEA7 /* Main.storyboard */; };
 		0388970D1F92B4D200B5BEA7 /* Macula.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0388970B1F92B4CF00B5BEA7 /* Macula.xcdatamodeld */; };
 		0388970F1F92B4D500B5BEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0388970E1F92B4D500B5BEA7 /* Assets.xcassets */; };
@@ -21,6 +21,8 @@
 		FA08143D1F9E0EFE00BC6363 /* DatabaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08143C1F9E0EFE00BC6363 /* DatabaseObject.swift */; };
 		FA08143F1F9E0F9700BC6363 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08143E1F9E0F9700BC6363 /* Profile.swift */; };
 		FA3AD47D1F9754D70000CB41 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AD47C1F9754D70000CB41 /* Backend.swift */; };
+		FAAC87551F9E2D1900A1AF73 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC87541F9E2D1900A1AF73 /* MapView.swift */; };
+		FAAC87571F9E488200A1AF73 /* UserLocationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC87561F9E488200A1AF73 /* UserLocationAnnotationView.swift */; };
 		FAB611261F976E78005C0490 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 038897351F92B60900B5BEA7 /* GoogleService-Info.plist */; };
 		FAB611281F97A3D8005C0490 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB611271F97A3D8005C0490 /* Config.swift */; };
 		FAD99C921F965A61003C093C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD99C911F965A61003C093C /* LoginViewController.swift */; };
@@ -51,7 +53,7 @@
 /* Begin PBXFileReference section */
 		038897011F92B4C200B5BEA7 /* Macula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038897041F92B4C300B5BEA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		038897061F92B4C300B5BEA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		038897061F92B4C300B5BEA7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		038897091F92B4C500B5BEA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0388970C1F92B4D000B5BEA7 /* Macula.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Macula.xcdatamodel; sourceTree = "<group>"; };
 		0388970E1F92B4D500B5BEA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +77,8 @@
 		FA08143C1F9E0EFE00BC6363 /* DatabaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseObject.swift; sourceTree = "<group>"; };
 		FA08143E1F9E0F9700BC6363 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		FA3AD47C1F9754D70000CB41 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		FAAC87541F9E2D1900A1AF73 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		FAAC87561F9E488200A1AF73 /* UserLocationAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationAnnotationView.swift; sourceTree = "<group>"; };
 		FAB611271F97A3D8005C0490 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FAD99C911F965A61003C093C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAD99C931F965AA4003C093C /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
@@ -144,7 +148,9 @@
 				FAB611271F97A3D8005C0490 /* Config.swift */,
 				038897041F92B4C300B5BEA7 /* AppDelegate.swift */,
 				FAD99C991F966998003C093C /* Extensions.swift */,
-				038897061F92B4C300B5BEA7 /* ViewController.swift */,
+				FAAC87541F9E2D1900A1AF73 /* MapView.swift */,
+				038897061F92B4C300B5BEA7 /* MapViewController.swift */,
+				FAAC87561F9E488200A1AF73 /* UserLocationAnnotationView.swift */,
 				FAD99C9B1F969363003C093C /* SignupView.swift */,
 				FAD99C9D1F969378003C093C /* SignupViewController.swift */,
 				FAD99C971F9662F1003C093C /* LoginView.swift */,
@@ -411,6 +417,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Macula/Pods-Macula-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -420,6 +428,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -517,12 +527,14 @@
 			files = (
 				FAD99C9C1F969363003C093C /* SignupView.swift in Sources */,
 				FA08143F1F9E0F9700BC6363 /* Profile.swift in Sources */,
+				FAAC87571F9E488200A1AF73 /* UserLocationAnnotationView.swift in Sources */,
 				FAD99C921F965A61003C093C /* LoginViewController.swift in Sources */,
 				FA08143D1F9E0EFE00BC6363 /* DatabaseObject.swift in Sources */,
+				FAAC87551F9E2D1900A1AF73 /* MapView.swift in Sources */,
 				FA3AD47D1F9754D70000CB41 /* Backend.swift in Sources */,
 				FAD99C9E1F969378003C093C /* SignupViewController.swift in Sources */,
 				FAD99C9A1F966998003C093C /* Extensions.swift in Sources */,
-				038897071F92B4C300B5BEA7 /* ViewController.swift in Sources */,
+				038897071F92B4C300B5BEA7 /* MapViewController.swift in Sources */,
 				0388970D1F92B4D200B5BEA7 /* Macula.xcdatamodeld in Sources */,
 				FAB611281F97A3D8005C0490 /* Config.swift in Sources */,
 				FAD99C981F9662F1003C093C /* LoginView.swift in Sources */,

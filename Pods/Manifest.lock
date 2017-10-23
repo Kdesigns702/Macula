@@ -48,6 +48,7 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.12)
   - leveldb-library (1.18.3)
+  - Mapbox-iOS-SDK (3.6.4)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Crash
   - Firebase/Database
+  - Mapbox-iOS-SDK (~> 3.6)
   - PKHUD (~> 5.0)
 
 SPEC CHECKSUMS:
@@ -74,10 +76,11 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
+  Mapbox-iOS-SDK: 47847dd44285477e0dfffd0130f65c8a52823ada
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
 
-PODFILE CHECKSUM: a4ac28bd1bfb756e44a95c56f87eaa65193f594f
+PODFILE CHECKSUM: 4945dca7898f52af72cd168aada39dd0bc63a062
 
 COCOAPODS: 1.3.1

@@ -6,47 +6,136 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialRoundedMTBold.ttf">
+            <string>ArialRoundedMTBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Macula" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MapViewController" customModule="Macula" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="MapView" customModule="Macula" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlJ-H2-45b">
-                                <rect key="frame" x="159.5" y="318" width="55" height="30"/>
-                                <state key="normal" title="Log Out"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="C7I-7g-bZD">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C7I-7g-bZD" secondAttribute="height" multiplier="1:1" id="R64-Ee-DZI"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXD-Ju-Ygr">
+                                <rect key="frame" x="16" y="40" width="343" height="53"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AYS-ey-Zss">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="53"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ql6-QR-oih">
+                                        <rect key="frame" x="20" y="12.5" width="21" height="28"/>
+                                        <state key="normal" image="profile-icon-m"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygv-R2-w3k">
+                                        <rect key="frame" x="300" y="16" width="25" height="22"/>
+                                        <state key="normal" image="chat-bubble-icon"/>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dVY-Xk-3UK">
+                                        <rect key="frame" x="76" y="15" width="191" height="24"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mag-glass-search-bar" translatesAutoresizingMaskIntoConstraints="NO" id="vee-3V-0FW">
+                                                <rect key="frame" x="0.0" y="1" width="23" height="22"/>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Location" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wby-kl-9wl">
+                                                <rect key="frame" x="27" y="0.0" width="164" height="24"/>
+                                                <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="37V-nl-Jn7"/>
+                                    <constraint firstAttribute="bottom" secondItem="AYS-ey-Zss" secondAttribute="bottom" id="5kJ-W9-EiP"/>
+                                    <constraint firstItem="dVY-Xk-3UK" firstAttribute="leading" secondItem="rXD-Ju-Ygr" secondAttribute="leading" constant="76" id="B0C-VB-Fwh"/>
+                                    <constraint firstItem="AYS-ey-Zss" firstAttribute="top" secondItem="rXD-Ju-Ygr" secondAttribute="top" id="N4R-kX-dlO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ygv-R2-w3k" secondAttribute="trailing" constant="18" id="OnS-YZ-Y8w"/>
+                                    <constraint firstItem="ql6-QR-oih" firstAttribute="centerY" secondItem="rXD-Ju-Ygr" secondAttribute="centerY" id="WjA-Su-xkf"/>
+                                    <constraint firstItem="Ygv-R2-w3k" firstAttribute="centerY" secondItem="rXD-Ju-Ygr" secondAttribute="centerY" id="bXy-TL-e97"/>
+                                    <constraint firstItem="AYS-ey-Zss" firstAttribute="leading" secondItem="rXD-Ju-Ygr" secondAttribute="leading" id="gDl-0M-Csd"/>
+                                    <constraint firstAttribute="trailing" secondItem="AYS-ey-Zss" secondAttribute="trailing" id="irr-nW-W7M"/>
+                                    <constraint firstItem="dVY-Xk-3UK" firstAttribute="centerY" secondItem="rXD-Ju-Ygr" secondAttribute="centerY" id="ocK-IT-3Pf"/>
+                                    <constraint firstAttribute="trailing" secondItem="dVY-Xk-3UK" secondAttribute="trailing" constant="76" id="ove-Eu-fHy"/>
+                                    <constraint firstItem="ql6-QR-oih" firstAttribute="leading" secondItem="rXD-Ju-Ygr" secondAttribute="leading" constant="20" id="sHm-ZS-b3b"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="948-rp-rnD">
+                                <rect key="frame" x="148" y="568" width="79" height="79"/>
+                                <state key="normal" image="macula-small-icon"/>
                                 <connections>
-                                    <action selector="logOutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RVv-8s-jdF"/>
+                                    <action selector="searchButtonPressed:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="CJb-Bk-cYQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Av-Te-jN4">
-                                <rect key="frame" x="159.5" y="289" width="55" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtd-Bo-Rb5">
+                                <rect key="frame" x="16" y="577.5" width="90" height="60"/>
+                                <state key="normal" image="parking-time-icon-active"/>
+                                <state key="selected" image="parking-time-icon-in-active"/>
+                                <connections>
+                                    <action selector="filterButtonPressed:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="fAJ-mf-eRP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-rU-d6g">
+                                <rect key="frame" x="273" y="578" width="86" height="59"/>
+                                <state key="normal" image="parking-icon-main"/>
+                                <connections>
+                                    <action selector="parkingButtonPressed:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="ID8-wO-tff"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wlJ-H2-45b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7LY-pv-M8o"/>
-                            <constraint firstItem="2Av-Te-jN4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8LV-CJ-e2G"/>
-                            <constraint firstItem="wlJ-H2-45b" firstAttribute="top" secondItem="2Av-Te-jN4" secondAttribute="bottom" constant="8" id="aNw-2W-8bJ"/>
-                            <constraint firstItem="wlJ-H2-45b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lAL-Kq-AtJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ahr-rU-d6g" secondAttribute="trailing" constant="16" id="2dz-IN-ggC"/>
+                            <constraint firstItem="C7I-7g-bZD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5xW-YL-rtJ"/>
+                            <constraint firstAttribute="trailing" secondItem="C7I-7g-bZD" secondAttribute="trailing" id="BkT-ht-hsV"/>
+                            <constraint firstItem="948-rp-rnD" firstAttribute="centerY" secondItem="xtd-Bo-Rb5" secondAttribute="centerY" id="KeK-D4-47X"/>
+                            <constraint firstItem="948-rp-rnD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O1m-J5-cie"/>
+                            <constraint firstItem="rXD-Ju-Ygr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PFb-on-sKa"/>
+                            <constraint firstItem="C7I-7g-bZD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QV7-PG-oeh"/>
+                            <constraint firstItem="Ahr-rU-d6g" firstAttribute="centerY" secondItem="xtd-Bo-Rb5" secondAttribute="centerY" id="Qcq-Gy-3fg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rXD-Ju-Ygr" secondAttribute="trailing" constant="16" id="Wgl-kR-Dco"/>
+                            <constraint firstItem="rXD-Ju-Ygr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pXL-j4-Rhg"/>
+                            <constraint firstItem="xtd-Bo-Rb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qrH-Ux-YPQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="948-rp-rnD" secondAttribute="bottom" constant="20" id="uOa-7f-1MU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="filterButton" destination="xtd-Bo-Rb5" id="nPN-L2-cz2"/>
+                            <outlet property="parkingButton" destination="Ahr-rU-d6g" id="hyk-sQ-Cob"/>
+                            <outlet property="searchButton" destination="948-rp-rnD" id="7B2-Me-tIg"/>
+                            <outlet property="toolbarImageView" destination="AYS-ey-Zss" id="xyk-IS-SIG"/>
+                        </connections>
                     </view>
-                    <connections>
-                        <outlet property="userIdLabel" destination="2Av-Te-jN4" id="frn-oo-lxD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat-bubble-icon" width="25" height="20"/>
+        <image name="macula-small-icon" width="79" height="79"/>
+        <image name="mag-glass-search-bar" width="23" height="22"/>
+        <image name="map_overlay" width="376" height="376"/>
+        <image name="parking-icon-main" width="86" height="59"/>
+        <image name="parking-time-icon-active" width="90" height="60"/>
+        <image name="parking-time-icon-in-active" width="90" height="60"/>
+        <image name="profile-icon-m" width="21" height="28"/>
+    </resources>
 </document>
