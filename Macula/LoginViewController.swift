@@ -9,16 +9,16 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-	
+
 	class func controller() -> LoginViewController {
 		let storyboard = UIStoryboard(name: "Auth", bundle: nil)
 		return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! LoginViewController
 	}
-	
+
 	private var mainView: LoginView {
 		return view as! LoginView
 	}
-	
+
 	override var preferredStatusBarStyle: UIStatusBarStyle {
 		return .lightContent
 	}
@@ -27,13 +27,13 @@ class LoginViewController: UIViewController {
 		super.viewDidLoad()
 		mainView.delegate = self
 	}
-	
+
 }
 
 extension LoginViewController: LoginViewDelegate {
-	
+
 	// MARK: - LoginViewDelegate
-	
+
 	func loginAction(email: String, password: String) {
 		mainView.activityIndicator(true)
 		Backend.shared.logIn(email: email, password: password) { user, error in
@@ -43,9 +43,15 @@ extension LoginViewController: LoginViewDelegate {
 			}
 		}
 	}
-	
+
 	func signupAction() {
 		let controller = SignupViewController.controller()
+		controller.modalTransitionStyle = .flipHorizontal
+		present(controller, animated: true, completion: nil)
+	}
+
+	func forgotPasswordAction() {
+		let controller = ForgotPasswordViewController.controller()
 		controller.modalTransitionStyle = .flipHorizontal
 		present(controller, animated: true, completion: nil)
 	}

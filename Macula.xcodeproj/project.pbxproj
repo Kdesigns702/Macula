@@ -21,6 +21,8 @@
 		FA08143D1F9E0EFE00BC6363 /* DatabaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08143C1F9E0EFE00BC6363 /* DatabaseObject.swift */; };
 		FA08143F1F9E0F9700BC6363 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA08143E1F9E0F9700BC6363 /* Profile.swift */; };
 		FA3AD47D1F9754D70000CB41 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AD47C1F9754D70000CB41 /* Backend.swift */; };
+		FA8512D11F9F400D00A3AE98 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8512D01F9F400D00A3AE98 /* ForgotPasswordViewController.swift */; };
+		FA8512D31F9F401D00A3AE98 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8512D21F9F401D00A3AE98 /* ForgotPasswordView.swift */; };
 		FAAC87551F9E2D1900A1AF73 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC87541F9E2D1900A1AF73 /* MapView.swift */; };
 		FAAC87571F9E488200A1AF73 /* UserLocationAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC87561F9E488200A1AF73 /* UserLocationAnnotationView.swift */; };
 		FAB611261F976E78005C0490 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 038897351F92B60900B5BEA7 /* GoogleService-Info.plist */; };
@@ -77,6 +79,8 @@
 		FA08143C1F9E0EFE00BC6363 /* DatabaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseObject.swift; sourceTree = "<group>"; };
 		FA08143E1F9E0F9700BC6363 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		FA3AD47C1F9754D70000CB41 /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		FA8512D01F9F400D00A3AE98 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FA8512D21F9F401D00A3AE98 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		FAAC87541F9E2D1900A1AF73 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FAAC87561F9E488200A1AF73 /* UserLocationAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationAnnotationView.swift; sourceTree = "<group>"; };
 		FAB611271F97A3D8005C0490 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				FAD99C9D1F969378003C093C /* SignupViewController.swift */,
 				FAD99C971F9662F1003C093C /* LoginView.swift */,
 				FAD99C911F965A61003C093C /* LoginViewController.swift */,
+				FA8512D21F9F401D00A3AE98 /* ForgotPasswordView.swift */,
+				FA8512D01F9F400D00A3AE98 /* ForgotPasswordViewController.swift */,
 				038897081F92B4C500B5BEA7 /* Main.storyboard */,
 				FAD99C931F965AA4003C093C /* Auth.storyboard */,
 				038897101F92B4D600B5BEA7 /* LaunchScreen.storyboard */,
@@ -527,6 +533,7 @@
 			files = (
 				FAD99C9C1F969363003C093C /* SignupView.swift in Sources */,
 				FA08143F1F9E0F9700BC6363 /* Profile.swift in Sources */,
+				FA8512D31F9F401D00A3AE98 /* ForgotPasswordView.swift in Sources */,
 				FAAC87571F9E488200A1AF73 /* UserLocationAnnotationView.swift in Sources */,
 				FAD99C921F965A61003C093C /* LoginViewController.swift in Sources */,
 				FA08143D1F9E0EFE00BC6363 /* DatabaseObject.swift in Sources */,
@@ -536,6 +543,7 @@
 				FAD99C9A1F966998003C093C /* Extensions.swift in Sources */,
 				038897071F92B4C300B5BEA7 /* MapViewController.swift in Sources */,
 				0388970D1F92B4D200B5BEA7 /* Macula.xcdatamodeld in Sources */,
+				FA8512D11F9F400D00A3AE98 /* ForgotPasswordViewController.swift in Sources */,
 				FAB611281F97A3D8005C0490 /* Config.swift in Sources */,
 				FAD99C981F9662F1003C093C /* LoginView.swift in Sources */,
 				038897051F92B4C300B5BEA7 /* AppDelegate.swift in Sources */,

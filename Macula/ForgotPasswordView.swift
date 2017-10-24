@@ -1,45 +1,42 @@
 //
-//  LoginView.swift
+//  ForgotPasswordView.swift
 //  Macula
 //
-//  Created by Alex Balobanov on 10/17/17.
+//  Created by Alex Balobanov on 10/24/17.
 //  Copyright © 2017 Macula, LLC. All rights reserved.
 //
 
 import UIKit
 import PKHUD
 
-protocol LoginViewDelegate: class {
-	func loginAction(email: String, password: String)
-	func signupAction()
-	func forgotPasswordAction()
+protocol ForgotPasswordViewDelegate: class {
+	func resetAction(email: String)
+	func loginAction()
 }
 
-class LoginView: UIView {
+class ForgotPasswordView: UIView {
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var emailTextField: UITextField!
-	@IBOutlet var passwordTextField: UITextField!
 	@IBOutlet var emailUnderlineView: UIView!
-	@IBOutlet var passwordUnderlineView: UIView!
-	@IBOutlet var loginButton: UIButton!
+	@IBOutlet var resetButton: UIButton!
 	@IBOutlet var facebookButton: UIButton!
 	@IBOutlet var googleButton: UIButton!
 
-	weak var delegate: LoginViewDelegate?
+	weak var delegate: ForgotPasswordViewDelegate?
 
 	override func awakeFromNib() {
 		// setup keyboard behavior
 		enableAutomaticallyHideKeyboardOnTap()
 		scrollView.enableAutomaticallyAdjustContentInsetsForKeyboard()
-
+		
 		// custom style for buttons
 		facebookButton.makeRoundButton()
 		googleButton.makeRoundButton()
 		
-		// login button's border
-		loginButton.makeBorderedButton()
+		// reset button's border
+		resetButton.makeBorderedButton()
 	}
-	
+
 	deinit {
 		scrollView.disableAutomaticallyAdjustContentInsetsForKeyboard()
 	}
@@ -53,57 +50,38 @@ class LoginView: UIView {
 		}
 	}
 
-	private func loginAction() {
+	private func resetAction() {
 		// check email
 		guard let email = emailTextField.text, email.isContainValidEmail() else {
 			emailUnderlineView.shake()
 			return
 		}
 
-		// check password
-		guard let password = passwordTextField.text,  password.isContainText() else {
-			passwordUnderlineView.shake()
-			return
-		}
-
 		// hide keyboard and submit
 		dismissKeyboard()
-		delegate?.loginAction(email: email, password: password)
+		delegate?.resetAction(email: email)
 	}
 
 	// MARK: - Action: return key pressed
 
 	@IBAction func emailTextFieldReturnKeyPressed(_ sender: Any) {
-		// jump to the next field
-		passwordTextField.becomeFirstResponder()
-	}
-	
-	@IBAction func passwordTextFieldReturnKeyPressed(_ sender: Any) {
-		loginAction()
+		resetAction()
 	}
 
 	// MARK: - Action: text changed
 
-	@IBAction func passwordTextFieldChanged(_ sender: Any) {
-		passwordUnderlineView.backgroundColor = passwordTextField.text!.isContainText() ? Config.UI.normalUnderlineViewColor : Config.UI.lightUnderlineViewColor
-	}
-	
 	@IBAction func emailTextFieldChanged(_ sender: Any) {
 		emailUnderlineView.backgroundColor = emailTextField.text!.isContainValidEmail() ? Config.UI.normalUnderlineViewColor : Config.UI.lightUnderlineViewColor
 	}
 
 	// MARK: - Action: button pressed
 
+	@IBAction func resetButtonPressed(_ sender: Any) {
+		resetAction()
+	}
+
 	@IBAction func loginButtonPressed(_ sender: Any) {
-		loginAction()
-	}
-
-	@IBAction func signupButtonPressed(_ sender: Any) {
-		delegate?.signupAction()
-	}
-
-	@IBAction func forgotPasswordButtonPressed(_ sender: Any) {
-		delegate?.forgotPasswordAction()
+		delegate?.loginAction()
 	}
 
 }

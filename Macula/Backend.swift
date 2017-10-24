@@ -76,4 +76,11 @@ class Backend: NSObject {
 		}
 	}
 
+	func resetPassword(with email: String, completion: @escaping (_ error: Error?) -> Void) {
+		// reset current user's password
+		Auth.auth().sendPasswordReset(withEmail: email) { error in
+			completion(error)
+		}
+	}
+
 }
